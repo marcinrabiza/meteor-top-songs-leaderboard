@@ -1,7 +1,7 @@
 # meteor-top-songs-leaderboard
 A simple reactive leaderboard application made with [MeteorJS](https://www.meteor.com).
 
-### How to runn?
+### How to run?
 
 1. To run the application you should have Meteor installed. You can use *curl* for that purpose:  
 ```curl https://install.meteor.com/ | sh```
