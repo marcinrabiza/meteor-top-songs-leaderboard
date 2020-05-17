@@ -3,7 +3,8 @@ A simple reactive leaderboard application made with [MeteorJS](https://www.meteo
 
 ### How to run?
 
-1. To run the application you should have Meteor installed. You can use *curl* command ```curl https://install.meteor.com/ | sh```  for that purpose.
+1. To run the application you should have Meteor installed. You can use *curl* for that purpose:
+```curl https://install.meteor.com/ | sh```
 
 3. Initialize application server with ```meteor run``` command in the project directory.
 
