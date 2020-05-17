@@ -1,0 +1,13 @@
+body {
+  padding: 10px;
+  font-family: sans-serif;
+}
+
+.button2 { color: white;
+  background-color: #2a2958;} /* Blue */
+.button3 { color: white;
+  background-color: #22ded8;}
+
+.selected{
+  background-color: #F5F5F5;
+  }

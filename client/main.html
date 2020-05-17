@@ -1,0 +1,55 @@
+<head> <title>Top Songs Chart</title>
+  </head>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-primary text-white mb-4">
+        <a class="navbar-brand" href="/">Top Songs Chart</a>
+    </nav>
+     <div class="container"> {{> leaderboard}}</div>
+</body>
+
+<template name="leaderboard">
+        <br>
+        <h1 class="display-4">Welcome to Top Songs Chart</h1>
+        <p class="mb-4">A simple reactive leaderboard application made with MeteorJS. </p>
+        <p class="mb-4">Select a song from table below and click a button for action or submit a new title.</p><br>
+       
+        {{> addHitForm}}<br><br>
+
+        <table class="table table-hover">
+                <thead>
+                    <tr> 
+                        <th>Song</th>
+                        <th>Band</th>
+                        <th></th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        {{#each hit}}
+                        <tr class="hit {{selectedClass}}"> 
+                            <td>{{song}}</td>
+                            <td>{{band}}</td>
+                            <td></td>
+                            <td>{{score}}</td>
+                        </tr>
+                        {{/each}}
+                </tbody> 
+            </table>
+            <input type="button" class="increment btn btn-success" value="Give 5 Points">
+            <input type="button" class="decrement btn btn-warning" value="Take 5 Points">
+            <input type="button" class="remove btn btn-danger" value="Remove Song">
+</template>
+
+<template name="addHitForm"> 
+        <form>
+            <div class="form-group">
+                <label for="title">Song title</label>
+                <input type="text" name="hitSong" class="form-control">
+            </div>
+            <div class="form-group">
+                    <label for="title">Band name</label>
+                    <input type="text" name="hitBand" class="form-control">
+                </div>
+            <input type="submit" value="Submit Song" class="btn btn-primary">
+        </form>
+</template>
